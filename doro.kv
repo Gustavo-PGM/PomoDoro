@@ -1,0 +1,36 @@
+<Pomodoro>:
+    MDIconButton:
+        icon: "clipboard-text-clock"
+        icon_size: "70sp"
+        pos_hint: {'center_x': .5, 'center_y': .8}
+
+    MDLabel:
+        text: root.tempo
+        font_style: 'H2'
+        halign: 'center'
+
+    MDRaisedButton:
+        text: root.botao
+        size_hint_x: .3
+        size_hint_2: .18
+        pos_hint: {'center_x': .5, 'center_y': .2}
+        on_release: root.clique()
+        
+            
+MDBoxLayout:
+    orientation: 'vertical'
+    
+    MDTopAppBar:
+        title: 'GusPomo'
+        left_action_items: [["menu"]]
+        right_action_items: [["theme-light-dark", lambda x: app.change_color()]]
+
+    Pomodoro
+
+
+
+
+
+
+#MDToolbar
+#MDLabel
